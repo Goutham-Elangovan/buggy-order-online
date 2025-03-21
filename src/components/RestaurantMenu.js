@@ -14,6 +14,7 @@ const RestaurantMenu = () => {
 
   if (resInfo === null) return <Shimmer />;
 
+
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards[2]?.card?.card?.info;
 
@@ -40,7 +41,7 @@ const RestaurantMenu = () => {
         <RestaurantCategory
           key={category?.card?.card.title}
           data={category?.card?.card}
-          showItems={index === showIndex ? true : false}
+          showItems={index === showIndex}
           setShowIndex={() => setShowIndex(index)}
           dummy={dummy}
         />
